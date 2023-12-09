@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/routes"
+    app:startDestination="@id/fragmentGlav">
+
+    <fragment
+        android:id="@+id/fragmentDetectiv"
+        android:name="com.example.madventure.FragmentDetectiv"
+        android:label="fragment_detectiv"
+        tools:layout="@layout/fragment_detectiv" />
+    <fragment
+        android:id="@+id/fragmentHoror"
+        android:name="com.example.madventure.FragmentHoror"
+        android:label="fragment_horor"
+        tools:layout="@layout/fragment_horor" />
+    <fragment
+        android:id="@+id/fragmentSearch"
+        android:name="com.example.madventure.FragmentSearch"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/fragmentFentezi"
+        android:name="com.example.madventure.FragmentFentezi"
+        android:label="fragment_fentezi"
+        tools:layout="@layout/fragment_fentezi" />
+    <fragment
+        android:id="@+id/fragmentGlav"
+        android:name="com.example.madventure.FragmentGlav"
+        android:label="fragment_glav"
+        tools:layout="@layout/fragment_glav" >
+        <action
+            android:id="@+id/action_fragmentGlav_to_fragmentSearch"
+            app:destination="@id/fragmentSearch" />
+        <action
+            android:id="@+id/action_fragmentGlav_to_fragmentFentezi"
+            app:destination="@id/fragmentFentezi" />
+        <action
+            android:id="@+id/action_fragmentGlav_to_fragmentDetectiv"
+            app:destination="@id/fragmentDetectiv" />
+        <action
+            android:id="@+id/action_fragmentGlav_to_fragmentHoror"
+            app:destination="@id/fragmentHoror" />
+    </fragment>
+</navigation>
